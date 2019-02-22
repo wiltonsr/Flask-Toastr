@@ -3,9 +3,8 @@ from flask import current_app
 
 class _toastr(object):
     @staticmethod
-    def include_toastr_js(version='2.1.4', local_js=None, no_js=None):
+    def include_toastr_js(version='2.1.4', local_js=None):
         js = ''
-        if not no_js:
             if local_js is not None:
                 js = '<script src="%s"></script>\n' % local_js
             elif version is not None:
@@ -15,15 +14,14 @@ class _toastr(object):
         return Markup(js)
 
     @staticmethod
-    def include_toastr_css(version='2.1.4', local_css=None, no_css=None):
+    def include_toastr_css(version='2.1.4', local_css=None):
         css = ''
-        if not no_css:
             if local_css is not None:
                 css = '<link href="%s" rel="stylesheet" />\n' % local_js
             elif version is not None:
                 css_filename = 'toastr.min.css'
                 css = '<link href="//cdnjs.cloudflare.com/ajax/libs/' \
-                     'toastr.js/%s/%s" rel="stylesheet" />\n' % (version, css_filename)
+                      'toastr.js/%s/%s" rel="stylesheet" />\n' % (version, css_filename)
         return Markup(css)
 
     @staticmethod
