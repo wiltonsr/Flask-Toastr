@@ -1,10 +1,19 @@
 <html>
   <head>
-    <title>Flask-Toastr example app</title>
+    <title>Flask-Toastr Example App</title>
     {{ toastr.include_jquery() }}
     {{ toastr.include_toastr_css() }}
   </head>
   <body>
-    {{ toastr.include_toastr_js() }}
+    <div>
+      <br/>
+      <h2>Flask-Toastr Example App - notification popup box using toastr JS Plugin</h2>
+      <br/>
+    </div>
+
+    {{ toastr.message() }}
+
+{{ toastr.include_toastr_js() }}
+
   </body>
-</html>
+  </html>
