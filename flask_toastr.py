@@ -4,35 +4,21 @@ from flask import current_app, render_template, get_flashed_messages
 
 class _toastr(object):
     @staticmethod
-    def include_toastr_js(version='2.1.4', local_js=None):
-        js = ''
-        if local_js is not None:
-            js = '<script src="%s"></script>\n' % local_js
-        elif version is not None:
-            js_filename = 'toastr.min.js'
-            js = '<script src="//cdnjs.cloudflare.com/ajax/libs/' \
-                 'toastr.js/%s/%s"></script>\n' % (version, js_filename)
+    def include_toastr_js(version='2.1.4', js_filename='toastr.min.js'):
+        js = '<script src="//cdnjs.cloudflare.com/ajax/libs/' \
+             'toastr.js/%s/%s"></script>\n' % (version, js_filename)
         return Markup(js)
 
     @staticmethod
-    def include_toastr_css(version='2.1.4', local_css=None):
-        css = ''
-        if local_css is not None:
-            css = '<link href="%s" rel="stylesheet" />\n' % local_js
-        elif version is not None:
-            css_filename = 'toastr.min.css'
-            css = '<link href="//cdnjs.cloudflare.com/ajax/libs/' \
-                  'toastr.js/%s/%s" rel="stylesheet" />\n' % (version, css_filename)
+    def include_toastr_css(version='2.1.4', css_filename='toastr.min.css'):
+        css = '<link href="//cdnjs.cloudflare.com/ajax/libs/' \
+              'toastr.js/%s/%s" rel="stylesheet" />\n' % (version, css_filename)
         return Markup(css)
 
     @staticmethod
-    def include_jquery(version='2.1.0', local_js=None):
-        js = ''
-        if local_js is not None:
-            js = '<script src="%s"></script>\n' % local_js
-        else:
-            js = ('<script src="//code.jquery.com/' +
-                  'jquery-%s.min.js"></script>') % version
+    def include_jquery(version='2.1.0'):
+        js = ('<script src="//code.jquery.com/' +
+              'jquery-%s.min.js"></script>') % version
         return Markup(js)
 
     @staticmethod
