@@ -59,6 +59,26 @@ def index():
 
 Step 4: Enjoy
 
+Parameters
+--------
+
+Config                    | Default           | Possible Values         | Description
+------------------------- | ----------------- | ----------------------- | -------------
+TOASTR_VERSION            | '2.1.4'           | [Releases from here](https://github.com/CodeSeven/toastr/releases) | Version of Toastr
+TOASTR_JQUERY_VERSION     | '2.1.0'           | [Releases from here](https://github.com/jquery/jquery/releases) | Version of JQuery
+TOASTR_CSS_FILENAME       | 'toastr.min.css'  | CDN file name           | CSS Filename used in CDN Toastr's link
+TOASTR_JS_FILENAME        | 'toastr.min.css'  | CDN file name           | JS Filename used in CDN Toastr's link
+TOASTR_CLOSE_BUTTON       | 'true'            | 'true' or 'false'       | Enable or Disable close button
+TOASTR_TIMEOUT            | 15000             | any `int` value (in ms) | Time to notification close
+TOASTR_EXTENDED_TIMEOUT   | 1000              | any `int` value (in ms) | Time to notification close after hover mouse or click
+TOASTR_POSITION_CLASS     | 'toast-top-right' | 'toast-top-right', 'toast-bottom-right', 'toast-bottom-left', 'toast-top-left', 'toast-top-full-width', 'toast-bottom-full-width', 'toast-top-center', 'toast-bottom-center' | Notification Positon
+TOASTR_PREVENT_DUPLICATES | 'false'           | 'true' or 'false'       | Doesn't show same notification
+TOASTR_NEWS_ON_TOP        | 'false'           | 'true' or 'false'       | Notification's aparition order
+TOASTR_PROGRESS_BAR       | 'true'            | 'true' or 'false'       | Enable or Disable progress bar
+
+    Note: The values `true` and `false` are passed to JS, that is Case Sensitive.
+    Therefore they need to be passed in low case.
+
 Examples
 --------
 
