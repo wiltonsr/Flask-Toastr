@@ -1,4 +1,4 @@
-Flask-Toastr 
+Flask-Toastr
 ============
 
 [![](https://img.shields.io/badge/python-3.4+-blue.svg)](https://www.python.org/download/releases/3.4.0/) [![](https://img.shields.io/badge/python-2.7+-blue.svg)](https://www.python.org/download/releases/2.7.2/) [![](https://img.shields.io/github/license/ResidentMario/missingno.svg)](https://github.com/wiltonsr/Flask-Toastr/blob/master/README.md)
@@ -77,7 +77,7 @@ TOASTR_NEWS_ON_TOP        | 'false'           | 'true' or 'false'       | Notifi
 TOASTR_PROGRESS_BAR       | 'true'            | 'true' or 'false'       | Enable or Disable progress bar
 
     Note: The values `true` and `false` are passed to JS, that is Case Sensitive.
-    Therefore they need to be passed in low case.
+    Therefore they must be passed in lowercase.
 
 Examples
 --------
