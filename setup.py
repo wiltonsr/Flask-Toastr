@@ -9,7 +9,7 @@ from setuptools import setup
 
 setup(
     name='Flask-Toastr',
-    version='0.1',
+    version='0.3',
     url='https://github.com/wiltonsr/Flask-Toastr/',
     license='MIT',
     author='Wilton Rodrigues',
@@ -21,7 +21,8 @@ setup(
     include_package_data=True,
     platforms='any',
     install_requires=[
-        'Flask'
+        'Flask',
+        'Jinja2',
     ],
     classifiers=[
         'Environment :: Web Environment',
