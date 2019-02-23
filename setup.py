@@ -9,7 +9,7 @@ from setuptools import setup
 
 setup(
     name='Flask-Toastr',
-    version='0.4',
+    version='0.5',
     url='https://github.com/wiltonsr/Flask-Toastr/',
     license='MIT',
     author='Wilton Rodrigues',

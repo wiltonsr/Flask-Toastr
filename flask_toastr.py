@@ -4,19 +4,29 @@ from flask import current_app, render_template, get_flashed_messages
 
 class _toastr(object):
     @staticmethod
-    def include_toastr_js(version='2.1.4', js_filename='toastr.min.js'):
+    def include_toastr_js(version=None, js_filename=None):
+        if version is None:
+            version = current_app.config.get('TOASTR_VERSION')
+        if js_filename is None:
+            js_filename = current_app.config.get('TOASTR_JS_FILENAME')
         js = '<script src="//cdnjs.cloudflare.com/ajax/libs/' \
              'toastr.js/%s/%s"></script>\n' % (version, js_filename)
         return Markup(js)
 
     @staticmethod
-    def include_toastr_css(version='2.1.4', css_filename='toastr.min.css'):
+    def include_toastr_css(version=None, css_filename=None):
+        if version is None:
+            version = current_app.config.get('TOASTR_VERSION')
+        if css_filename is None:
+            css_filename = current_app.config.get('TOASTR_CSS_FILENAME')
         css = '<link href="//cdnjs.cloudflare.com/ajax/libs/' \
               'toastr.js/%s/%s" rel="stylesheet" />\n' % (version, css_filename)
         return Markup(css)
 
     @staticmethod
-    def include_jquery(version='2.1.0'):
+    def include_jquery(version=None):
+        if version is None:
+            version = current_app.config.get('TOASTR_JQUERY_VERSION')
         js = ('<script src="//code.jquery.com/' +
               'jquery-%s.min.js"></script>') % version
         return Markup(js)
@@ -72,6 +82,11 @@ class Toastr(object):
             app.extensions = {}
         app.extensions['toastr'] = _toastr
         app.context_processor(self.context_processor)
+
+        app.config.setdefault('TOASTR_VERSION', '2.1.4')
+        app.config.setdefault('TOASTR_JQUERY_VERSION', '2.1.0')
+        app.config.setdefault('TOASTR_CSS_FILENAME', 'toastr.min.css')
+        app.config.setdefault('TOASTR_JS_FILENAME', 'toastr.min.js')
 
         app.config.setdefault('TOASTR_CLOSE_BUTTON', 'true')
         app.config.setdefault('TOASTR_TIMEOUT', 15000)
