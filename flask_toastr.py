@@ -44,7 +44,7 @@ class _toastr(object):
       (function($) {
         $(document).ready(function() {
           {{ toastr_options }}
-          {% for category, message in messages|reverse %}
+          {% for category, message in messages %}
             {% if category is undefined or category == 'message' %}
               toastr.info(\'{{ message }}\', \'{{ category }}\')
             {% else %}
