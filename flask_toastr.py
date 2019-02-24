@@ -21,7 +21,15 @@ class _toastr(object):
             css_filename = current_app.config.get('TOASTR_CSS_FILENAME')
         css = '<link href="//cdnjs.cloudflare.com/ajax/libs/' \
               'toastr.js/%s/%s" rel="stylesheet" />\n' % (version, css_filename)
-        return Markup(css)
+        if current_app.config.get('TOASTR_OPACITY'):
+            return Markup(css)
+        else:
+            return Markup('''
+<style type = text/css>
+  #toast-container>div {
+    opacity: 1 !important;
+  }
+</style> %s''' % css)
 
     @staticmethod
     def include_jquery(version=None):
@@ -95,6 +103,7 @@ class Toastr(object):
         app.config.setdefault('TOASTR_PREVENT_DUPLICATES', 'false')
         app.config.setdefault('TOASTR_NEWS_ON_TOP', 'false')
         app.config.setdefault('TOASTR_PROGRESS_BAR', 'true')
+        app.config.setdefault('TOASTR_OPACITY', True)
 
     @staticmethod
     def context_processor():

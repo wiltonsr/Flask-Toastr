@@ -75,6 +75,7 @@ TOASTR_POSITION_CLASS     | 'toast-top-right' | 'toast-top-right', 'toast-bottom
 TOASTR_PREVENT_DUPLICATES | 'false'           | 'true' or 'false'       | Doesn't show same notification
 TOASTR_NEWS_ON_TOP        | 'false'           | 'true' or 'false'       | Notification's aparition order
 TOASTR_PROGRESS_BAR       | 'true'            | 'true' or 'false'       | Enable or Disable progress bar
+TOASTR_OPACITY            | True              | True or False           | Enable or Disable notification's opacity
 
     Note: The values `true` and `false` are passed to JS, that is Case Sensitive.
     Therefore they must be passed in lowercase.
