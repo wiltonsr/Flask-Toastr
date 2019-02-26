@@ -64,9 +64,9 @@ class _toastr(object):
           {{ toastr_options }}
           {% for category, message in messages %}
             {% if category is undefined or category == 'message' %}
-              toastr.info(\'{{ message }}\', \'{{ category }}\')
+              toastr.info(\'{{ message }}\', \'{{ category|capitalize }}\')
             {% else %}
-              toastr.{{ category }}(\'{{ message }}\', \'{{ category }}\')
+              toastr.{{ category }}(\'{{ message }}\', \'{{ category|capitalize }}\')
             {% endif %}
           {% endfor %}
         });
