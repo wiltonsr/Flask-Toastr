@@ -108,7 +108,7 @@ To run the example in your local environment::
 Function Reference
 ------------------
 
-Consult the [roastr documentation](https://github.com/CodeSeven/toastr#toastr) for more details.
+Consult the [toastr documentation](https://github.com/CodeSeven/toastr#toastr) for more details.
 
 Development
 -----------
