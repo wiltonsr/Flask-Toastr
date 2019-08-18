@@ -5,6 +5,10 @@ Flask-Toastr
 
 Showing Flask's flash non-blocking notifications in templates using [toastr](https://github.com/CodeSeven/toastr).
 
+Donate to help keep this project maintained.
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5QJ62BNMRC75W&currency_code=USD&source=url">
+<img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" /></a>
+
 Quick Start
 -----------
 
