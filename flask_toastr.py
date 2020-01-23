@@ -2,6 +2,7 @@
 from jinja2 import Markup, Template
 from flask import current_app, render_template, get_flashed_messages
 
+
 class _toastr(object):
     @staticmethod
     def include_toastr_js(version=None, js_filename=None):
@@ -10,7 +11,7 @@ class _toastr(object):
         if js_filename is None:
             js_filename = current_app.config.get('TOASTR_JS_FILENAME')
         js = '<script src="//cdnjs.cloudflare.com/ajax/libs/' \
-             'toastr.js/%s/%s"></script>\n' % (version, js_filename)
+             'toastr.js/{0}/{1}"></script>\n'.format(version, js_filename)
         return Markup(js)
 
     @staticmethod
@@ -20,7 +21,10 @@ class _toastr(object):
         if css_filename is None:
             css_filename = current_app.config.get('TOASTR_CSS_FILENAME')
         css = '<link href="//cdnjs.cloudflare.com/ajax/libs/' \
-              'toastr.js/%s/%s" rel="stylesheet" />\n' % (version, css_filename)
+              'toastr.js/{0}/{1}" rel="stylesheet" />\n'.format(
+                version,
+                css_filename
+                )
         if current_app.config.get('TOASTR_OPACITY'):
             return Markup(css)
         else:
@@ -29,14 +33,14 @@ class _toastr(object):
   #toast-container>div {
     opacity: 1 !important;
   }
-</style> %s''' % css)
+</style> {0}'''.format(css))
 
     @staticmethod
     def include_jquery(version=None):
         if version is None:
             version = current_app.config.get('TOASTR_JQUERY_VERSION')
         js = ('<script src="//code.jquery.com/' +
-              'jquery-%s.min.js"></script>') % version
+              'jquery-{0}.min.js"></script>'.format(version))
         return Markup(js)
 
     @staticmethod
@@ -75,9 +79,11 @@ class _toastr(object):
   {% endif %}
 {% endwith %}
 ''')
-        return Markup(render_template(message,
-            get_flashed_messages=get_flashed_messages,
-            toastr_options=toastr_options))
+        return Markup(render_template(
+          message,
+          get_flashed_messages=get_flashed_messages,
+          toastr_options=toastr_options)
+          )
 
 
 class Toastr(object):
@@ -107,9 +113,7 @@ class Toastr(object):
 
     @staticmethod
     def context_processor():
-        return {
-            'toastr': current_app.extensions['toastr']
-        }
+        return {'toastr': current_app.extensions['toastr']}
 
     def create(self, timestamp=None):
         return current_app.extensions['toastr'](timestamp)
