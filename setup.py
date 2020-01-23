@@ -4,18 +4,22 @@ Flask-Toastr
 
 Showing non-blocking notifications in Flask templates using toastr.
 """
+import io
 from setuptools import setup
 
+with io.open('README.md', 'rt', encoding='utf8') as f:
+        readme = f.read()
 
 setup(
     name='Flask-Toastr',
-    version='0.5.3',
+    version='0.5.4',
     url='https://github.com/wiltonsr/Flask-Toastr/',
     license='MIT',
     author='Wilton Rodrigues',
     author_email='wiltonsr94@gmail.com',
     description='Showing non-blocking notifications in Flask templates using toastr.',
-    long_description=__doc__,
+    long_description=readme,
+    long_description_content_type='text/markdown',
     py_modules=['flask_toastr'],
     zip_safe=False,
     include_package_data=True,
