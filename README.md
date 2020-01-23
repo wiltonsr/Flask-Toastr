@@ -1,7 +1,7 @@
 Flask-Toastr
 ============
 
-[![](https://img.shields.io/badge/python-3.4+-blue.svg)](https://www.python.org/download/releases/3.4.0/) [![](https://img.shields.io/github/license/ResidentMario/missingno.svg)](https://github.com/wiltonsr/Flask-Toastr/blob/master/README.md)
+[![](https://img.shields.io/badge/python-3.4+-blue.svg)](https://www.python.org/download/releases/3.4.0/) [![](https://img.shields.io/badge/python-2.7+-blue.svg)](https://www.python.org/download/releases/2.7.2/) [![](https://img.shields.io/github/license/ResidentMario/missingno.svg)](https://github.com/wiltonsr/Flask-Toastr/blob/master/README.md)
 
 Showing Flask's flash non-blocking notifications in templates using [toastr](https://github.com/CodeSeven/toastr).
 
