@@ -73,6 +73,12 @@ TOASTR_JQUERY_VERSION     | '2.1.0'           | [Releases from here](https://git
 TOASTR_CSS_FILENAME       | 'toastr.min.css'  | CDN file name           | CSS Filename used in CDN Toastr's link
 TOASTR_JS_FILENAME        | 'toastr.min.css'  | CDN file name           | JS Filename used in CDN Toastr's link
 TOASTR_CLOSE_BUTTON       | 'true'            | 'true' or 'false'       | Enable or Disable close button
+TOASTR_SHOW_EASING        | 'swing'           | 'swing' or 'linear'     | Override the animation easing to show the toasts
+TOASTR_HIDE_EASING        | 'linear'          | 'swing' or 'linear'     | Override the animation easing to hide the toasts
+TOASTR_CLOSE_EASING       | 'linear'          | 'swing' or 'linear'     | Override the animation easing to close the toasts
+TOASTR_SHOW_METHOD        | 'fadeIn'          | 'fadeIn', 'fadeOut', 'slideDown', 'slideUp, 'show', 'hide' | Override the animation method to show the toasts
+TOASTR_HIDE_METHOD        | 'fadeOut'         | 'fadeIn', 'fadeOut', 'slideDown', 'slideUp, 'show', 'hide' | Override the animation method to hide the toasts
+TOASTR_CLOSE_METHOD       | 'fadeOut'         | 'fadeIn', 'fadeOut', 'slideDown', 'slideUp, 'show', 'hide' | Override the animation method to close the toasts
 TOASTR_TIMEOUT            | 15000             | any `int` value (in ms) | Time to notification close
 TOASTR_EXTENDED_TIMEOUT   | 1000              | any `int` value (in ms) | Time to notification close after hover mouse or click
 TOASTR_POSITION_CLASS     | 'toast-top-right' | 'toast-top-right', 'toast-bottom-right', 'toast-bottom-left', 'toast-top-left', 'toast-top-full-width', 'toast-bottom-full-width', 'toast-top-center', 'toast-bottom-center' | Notification Positon

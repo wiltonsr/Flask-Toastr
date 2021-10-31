@@ -46,6 +46,12 @@ class _toastr(object):
     @staticmethod
     def message():
         toastr_options = 'toastr.options.closeButton = %s; \
+        toastr.options.showEasing = \"%s\"; \
+        toastr.options.hideEasing = \"%s\"; \
+        toastr.options.closeEasing = \"%s\"; \
+        toastr.options.showMethod = \"%s\"; \
+        toastr.options.hideMethod = \"%s\"; \
+        toastr.options.closeMethod = \"%s\"; \
         toastr.options.timeOut = %s; \
         toastr.options.extendedTimeOut = %s; \
         toastr.options.positionClass = \"%s\"; \
@@ -53,6 +59,12 @@ class _toastr(object):
         toastr.options.newestOnTop = %s; \
         toastr.options.progressBar = %s; ' % (
             current_app.config.get('TOASTR_CLOSE_BUTTON'),
+            current_app.config.get('TOASTR_SHOW_EASING'),
+            current_app.config.get('TOASTR_HIDE_EASING'),
+            current_app.config.get('TOASTR_CLOSE_EASING'),
+            current_app.config.get('TOASTR_SHOW_METHOD'),
+            current_app.config.get('TOASTR_HIDE_METHOD'),
+            current_app.config.get('TOASTR_CLOSE_METHOD'),
             current_app.config.get('TOASTR_TIMEOUT'),
             current_app.config.get('TOASTR_EXTENDED_TIMEOUT'),
             current_app.config.get('TOASTR_POSITION_CLASS'),
@@ -103,6 +115,12 @@ class Toastr(object):
         app.config.setdefault('TOASTR_JS_FILENAME', 'toastr.min.js')
 
         app.config.setdefault('TOASTR_CLOSE_BUTTON', 'true')
+        app.config.setdefault('TOASTR_SHOW_EASING', 'swing')
+        app.config.setdefault('TOASTR_HIDE_EASING', 'linear')
+        app.config.setdefault('TOASTR_CLOSE_EASING', 'linear')
+        app.config.setdefault('TOASTR_SHOW_METHOD', 'fadeIn')
+        app.config.setdefault('TOASTR_HIDE_METHOD', 'fadeOut')
+        app.config.setdefault('TOASTR_CLOSE_METHOD', 'fadeOut')
         app.config.setdefault('TOASTR_TIMEOUT', 15000)
         app.config.setdefault('TOASTR_EXTENDED_TIMEOUT', 1000)
         app.config.setdefault('TOASTR_POSITION_CLASS', 'toast-top-right')
