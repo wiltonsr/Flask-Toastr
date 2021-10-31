@@ -66,26 +66,26 @@ Step 4: Enjoy
 Parameters
 --------
 
-Config                    | Default           | Possible Values         | Description
-------------------------- | ----------------- | ----------------------- | -------------
-TOASTR_VERSION            | '2.1.4'           | [Releases from here](https://github.com/CodeSeven/toastr/releases) | Version of Toastr
-TOASTR_JQUERY_VERSION     | '2.1.0'           | [Releases from here](https://github.com/jquery/jquery/releases) | Version of JQuery
-TOASTR_CSS_FILENAME       | 'toastr.min.css'  | CDN file name           | CSS Filename used in CDN Toastr's link
-TOASTR_JS_FILENAME        | 'toastr.min.css'  | CDN file name           | JS Filename used in CDN Toastr's link
-TOASTR_CLOSE_BUTTON       | 'true'            | 'true' or 'false'       | Enable or Disable close button
-TOASTR_SHOW_EASING        | 'swing'           | 'swing' or 'linear'     | Override the animation easing to show the toasts
-TOASTR_HIDE_EASING        | 'linear'          | 'swing' or 'linear'     | Override the animation easing to hide the toasts
-TOASTR_CLOSE_EASING       | 'linear'          | 'swing' or 'linear'     | Override the animation easing to close the toasts
-TOASTR_SHOW_METHOD        | 'fadeIn'          | 'fadeIn', 'fadeOut', 'slideDown', 'slideUp, 'show', 'hide' | Override the animation method to show the toasts
-TOASTR_HIDE_METHOD        | 'fadeOut'         | 'fadeIn', 'fadeOut', 'slideDown', 'slideUp, 'show', 'hide' | Override the animation method to hide the toasts
-TOASTR_CLOSE_METHOD       | 'fadeOut'         | 'fadeIn', 'fadeOut', 'slideDown', 'slideUp, 'show', 'hide' | Override the animation method to close the toasts
-TOASTR_TIMEOUT            | 15000             | any `int` value (in ms) | Time to notification close
-TOASTR_EXTENDED_TIMEOUT   | 1000              | any `int` value (in ms) | Time to notification close after hover mouse or click
-TOASTR_POSITION_CLASS     | 'toast-top-right' | 'toast-top-right', 'toast-bottom-right', 'toast-bottom-left', 'toast-top-left', 'toast-top-full-width', 'toast-bottom-full-width', 'toast-top-center', 'toast-bottom-center' | Notification Positon
-TOASTR_PREVENT_DUPLICATES | 'false'           | 'true' or 'false'       | Doesn't show same notification
-TOASTR_NEWS_ON_TOP        | 'false'           | 'true' or 'false'       | Notification's aparition order
-TOASTR_PROGRESS_BAR       | 'true'            | 'true' or 'false'       | Enable or Disable progress bar
-TOASTR_OPACITY            | True              | True or False           | Enable or Disable notification's opacity
+Config                    | Default           | Possible Values         | Description   | Reference           |
+------------------------- | ----------------- | ----------------------- | ------------- | --------------------|
+TOASTR_VERSION            | '2.1.4'           | [Releases from here](https://github.com/CodeSeven/toastr/releases) | Version of Toastr | https://github.com/CodeSeven/toastr/releases |
+TOASTR_JQUERY_VERSION     | '2.1.0'           | [Releases from here](https://github.com/jquery/jquery/releases) | Version of JQuery | https://releases.jquery.com/jquery/ |
+TOASTR_CSS_FILENAME       | 'toastr.min.css'  | CDN file name           | CSS Filename used in CDN Toastr's link | https://github.com/CodeSeven/toastr#cdns |
+TOASTR_JS_FILENAME        | 'toastr.min.css'  | CDN file name           | JS Filename used in CDN Toastr's link | https://github.com/CodeSeven/toastr#cdns |
+TOASTR_CLOSE_BUTTON       | 'true'            | 'true' or 'false'       | Enable or Disable close button | https://github.com/CodeSeven/toastr#close-button |
+TOASTR_SHOW_EASING        | 'swing'           | 'swing' or 'linear'     | Override the animation easing to show the toasts  | https://github.com/CodeSeven/toastr#animation-options |
+TOASTR_HIDE_EASING        | 'linear'          | 'swing' or 'linear'     | Override the animation easing to hide the toasts  | https://github.com/CodeSeven/toastr#animation-options |
+TOASTR_CLOSE_EASING       | 'linear'          | 'swing' or 'linear'     | Override the animation easing to close the toasts | https://github.com/CodeSeven/toastr#animation-options |
+TOASTR_SHOW_METHOD        | 'fadeIn'          | 'fadeIn', 'fadeOut', 'slideDown', 'slideUp, 'show', 'hide' | Override the animation method to show the toasts  | https://github.com/CodeSeven/toastr#animation-options |
+TOASTR_HIDE_METHOD        | 'fadeOut'         | 'fadeIn', 'fadeOut', 'slideDown', 'slideUp, 'show', 'hide' | Override the animation method to hide the toasts  | https://github.com/CodeSeven/toastr#animation-options |
+TOASTR_CLOSE_METHOD       | 'fadeOut'         | 'fadeIn', 'fadeOut', 'slideDown', 'slideUp, 'show', 'hide' | Override the animation method to close the toasts | https://github.com/CodeSeven/toastr#animation-options |
+TOASTR_TIMEOUT            | 15000             | any `int` value (in ms) | Time to notification close | https://github.com/CodeSeven/toastr#timeouts |
+TOASTR_EXTENDED_TIMEOUT   | 1000              | any `int` value (in ms) | Time to notification close after hover mouse or click | https://github.com/CodeSeven/toastr#timeouts |
+TOASTR_POSITION_CLASS     | 'toast-top-right' | 'toast-top-right', 'toast-bottom-right', 'toast-bottom-left', 'toast-top-left', 'toast-top-full-width', 'toast-bottom-full-width', 'toast-top-center', 'toast-bottom-center' | Notification Positon | https://codeseven.github.io/toastr/demo.html |
+TOASTR_PREVENT_DUPLICATES | 'false'           | 'true' or 'false'       | Doesn't show same notification | https://github.com/CodeSeven/toastr#prevent-duplicates |
+TOASTR_NEWS_ON_TOP        | 'false'           | 'true' or 'false'       | Notification's aparition order | https://github.com/CodeSeven/toastr#display-sequence |
+TOASTR_PROGRESS_BAR       | 'true'            | 'true' or 'false'       | Enable or Disable progress bar | https://github.com/CodeSeven/toastr#progress-bar |
+TOASTR_OPACITY            | True              | True or False           | Enable or Disable notification's opacity | https://stackoverflow.com/a/17640150/7041939 |
 
     Note: The values `true` and `false` are passed to JS, that is Case Sensitive.
     Therefore they must be passed in lowercase.
