@@ -68,7 +68,7 @@ Parameters
 
 Config                    | Default           | Possible Values         | Description   | Reference           |
 ------------------------- | ----------------- | ----------------------- | ------------- | --------------------|
-TOASTR_VERSION            | '2.1.4'           | [Releases from here](https://github.com/CodeSeven/toastr/releases) | Version of Toastr | https://github.com/CodeSeven/toastr/releases |
+TOASTR_VERSION            | '2.1.4'           | [Releases from here](https://github.com/CodeSeven/toastr/releases) | Version of Toastr | https://github.com/CodeSeven/toastr/tags |
 TOASTR_JQUERY_VERSION     | '2.1.0'           | [Releases from here](https://github.com/jquery/jquery/releases) | Version of JQuery | https://releases.jquery.com/jquery/ |
 TOASTR_CSS_FILENAME       | 'toastr.min.css'  | CDN file name           | CSS Filename used in CDN Toastr's link | https://github.com/CodeSeven/toastr#cdns |
 TOASTR_JS_FILENAME        | 'toastr.min.css'  | CDN file name           | JS Filename used in CDN Toastr's link | https://github.com/CodeSeven/toastr#cdns |
