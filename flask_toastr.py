@@ -30,9 +30,9 @@ class _toastr(object):
         else:
             return Markup('''
 <style type = text/css>
-  #toast-container>div {
+  #toast-container>div {{
     opacity: 1 !important;
-  }
+  }}
 </style> {0}'''.format(css))
 
     @staticmethod
