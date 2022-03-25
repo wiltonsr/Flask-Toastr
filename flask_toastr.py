@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-from jinja2 import Markup, Template
+try:
+    from jinja2 import Markup
+except ImportError:
+    from markupsafe import Markup
+from jinja2 import Template
 from flask import current_app, render_template, get_flashed_messages
 
 

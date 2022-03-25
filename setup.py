@@ -12,7 +12,7 @@ with io.open('README.md', 'rt', encoding='utf8') as f:
 
 setup(
     name='Flask-Toastr',
-    version='0.5.6',
+    version='0.5.7',
     url='https://github.com/wiltonsr/Flask-Toastr/',
     license='MIT',
     author='Wilton Rodrigues',
