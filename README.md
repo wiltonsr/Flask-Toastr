@@ -71,7 +71,7 @@ Config                    | Default           | Possible Values         | Descri
 TOASTR_VERSION            | '2.1.4'           | [Releases from here](https://github.com/CodeSeven/toastr/releases) | Version of Toastr | https://github.com/CodeSeven/toastr/tags |
 TOASTR_JQUERY_VERSION     | '2.1.0'           | [Releases from here](https://github.com/jquery/jquery/releases) | Version of JQuery | https://releases.jquery.com/jquery/ |
 TOASTR_CSS_FILENAME       | 'toastr.min.css'  | CDN file name           | CSS Filename used in CDN Toastr's link | https://github.com/CodeSeven/toastr#cdns |
-TOASTR_JS_FILENAME        | 'toastr.min.css'  | CDN file name           | JS Filename used in CDN Toastr's link | https://github.com/CodeSeven/toastr#cdns |
+TOASTR_JS_FILENAME        | 'toastr.min.js'   | CDN file name           | JS Filename used in CDN Toastr's link | https://github.com/CodeSeven/toastr#cdns |
 TOASTR_CLOSE_BUTTON       | 'true'            | 'true' or 'false'       | Enable or Disable close button | https://github.com/CodeSeven/toastr#close-button |
 TOASTR_SHOW_EASING        | 'swing'           | 'swing' or 'linear'     | Override the animation easing to show the toasts  | https://github.com/CodeSeven/toastr#animation-options |
 TOASTR_HIDE_EASING        | 'linear'          | 'swing' or 'linear'     | Override the animation easing to hide the toasts  | https://github.com/CodeSeven/toastr#animation-options |
