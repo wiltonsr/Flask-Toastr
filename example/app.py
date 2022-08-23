@@ -15,7 +15,7 @@ def index():
     flash("Warning Category and Default Title", 'warning')
     # Custom Title
     flash("Info Category", 'Custom Title')
-    flash({'title': "Custom Title", 'message': "Info Category"},)
+    flash({'title': "Custom Title", 'message': "Info Category"})
     flash({'title': "Custom Title", 'message': "Error Category"}, 'error')
     return render_template('index.html')
 
