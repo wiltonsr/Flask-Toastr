@@ -34,15 +34,17 @@ Step 2: In your `<head>` and bottom of `<body>`sections of your base template ad
 
 This extension also supports the [Flask application factory pattern](http://flask.pocoo.org/docs/latest/patterns/appfactories/) by allowing you to create a Toastr object and then separately initialize it for an app:
 
-        toastr = Toastr()
+```python
+toastr = Toastr()
 
-        def create_app(config):
-            app = Flask(__name__)
-            app.config.from_object(config)
-            # initialize toastr on the app within create_app()
-            toastr.init_app(app)
+def create_app(config):
+  app = Flask(__name__)
+  app.config.from_object(config)
+  # initialize toastr on the app within create_app()
+  toastr.init_app(app)
 
-        app = create_app(prod_config)
+app = create_app(prod_config)
+```
 
 Note that jQuery is required. If you are already including it on your own then you can remove the `include_jquery()` line. Secure HTTP is used if the request under which these are executed is secure.
 
