@@ -84,6 +84,11 @@ class _toastr(object):
           {{ toastr_options }}
           {% for category, message in messages %}
             {% if category is undefined or category == 'message' %}
+              {% set category = 'info' %}
+            {% endif %}
+            {% if message is mapping %}
+              toastr.{{ category }}(\'{{ message['message'] | replace("'","\\\\'") }}\', \'{{ message['title'] | replace("'","\\\\'") }}\')
+            {% elif category not in ['message', 'error', 'warning', 'info', 'success'] %}
               toastr.info(\'{{ message | replace("'","\\\\'") }}\', \'{{ category|capitalize }}\')
             {% else %}
               toastr.{{ category }}(\'{{ message | replace("'","\\\\'") }}\', \'{{ category|capitalize }}\')

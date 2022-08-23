@@ -61,6 +61,16 @@ def index():
     return render_template('index.html')
 ```
 
+Or you could also use `flash()` method with custom titles:
+
+```python
+@app.route('/')
+def index():
+    flash("Message", 'Custom Title')
+    flash({'title': "Custom Title", 'message': "Error Message"}, 'error')
+    return render_template('index.html')
+```
+
 Step 4: Enjoy
 
 Parameters
