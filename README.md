@@ -61,7 +61,7 @@ def index():
     return render_template('index.html')
 ```
 
-Or you could also use `flash()` method with custom titles:
+Or you could also use `flash()` method with custom titles, see [#14](https://github.com/wiltonsr/Flask-Toastr/issues/14) for details:
 
 ```python
 @app.route('/')
