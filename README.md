@@ -104,23 +104,23 @@ Examples
 --------
 
 ```
-To run the example in your local environment::
+To run the example in your local environment:
 
-  1. Clone the repository::
+  1. Clone the repository:
 
         git clone https://github.com/wiltonsr/Flask-Toastr.git
         cd Flask-Toastr
 
-  2. Create and activate a virtual environment::
+  2. Create and activate a virtual environment:
 
         virtualenv env
         source env/bin/activate
 
-  3. Install requirements::
+  3. Install requirements:
 
         pip install -r 'example/requirements.txt'
 
-  4. Run the application::
+  4. Run the application:
 
         python example/app.py
 ```
